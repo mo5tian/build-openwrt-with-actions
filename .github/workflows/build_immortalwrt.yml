@@ -120,7 +120,7 @@ jobs:
         uses: csexton/debugger-action@master
 
       - name: 启用ssh生成了.config后在编译前上传配置(Upload config before build)
-        if: ${{inputs.multithreading == true}}
+        if: ${{inputs.ssh == true}}
         uses: actions/upload-artifact@v4
         with:
           name: config-before-build
